@@ -1,0 +1,73 @@
+# Core IPFS Dependencies
+ipfs_kit_py==0.0.18
+ipfs_model_manager_py==0.0.23
+libp2p_kit_py==0.0.19
+ipfs_transformers_py
+ipfs_faiss_py==0.0.6
+ipfs-datasets-py>=0.0.5
+ipfs-accelerate-py>=0.0.41
+ipfs_embeddings_py>=0.0.24
+
+# Machine Learning & Deep Learning
+transformers==4.46
+torch>=2.1
+torchvision
+numpy
+torchtext
+sentence_transformers
+InstructorEmbedding
+timm
+einops
+
+# Intel OpenVINO Dependencies
+openvino>=2024.6
+openvino-tokenizers>=2024.6
+openvino-genai>=2024.6
+nncf>=2.14.0
+optimum[openvino]
+optimum[intel]
+optimum[exporters]
+
+# ONNX Runtime
+onnxruntime==1.19.2
+onnx==1.16.1
+
+# Web & Network Dependencies
+urllib3
+requests
+boto3
+websocket
+websocket-client
+trio
+multiformats
+
+# Media Processing
+Pillow
+pydub
+ffmpeg-python
+opencv-python
+decord
+librosa
+
+# Utilities
+toml
+pydantic
+tiktoken
+pysbd
+dataclasses-json
+llama-index
+qdrant_client
+
+# Development Dependencies
+protobuf 
+
+# IPFS Dependencies
+ipfs-http-client
+ipfs-py
+ipfs-py-http-client
+ipfs-py-http-client-pydantic
+
+# FastAPI Dependencies
+fastapi
+uvicorn
+
