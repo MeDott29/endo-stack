@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "components": {
+    "voice_kit_webgpu_cjs": {
+      "type": "node",
+      "version": "1.0.0",
+      "dependencies": {
+        "webgpu": ">=0.1.34",
+        "ipfs": ">=60.0.0"
+      },
+      "port": 3000
+    },
+    "ipfs_accelerate_py": {
+      "type": "python",
+      "version": "1.0.0",
+      "dependencies": {
+        "torch": ">=2.0.0",
+        "ipfs-http-client": ">=0.8.0"
+      },
+      "port": 3001
+    },
+    "ipfs_transformers_py": {
+      "type": "python",
+      "version": "1.0.0",
+      "dependencies": {
+        "transformers": ">=4.0.0",
+        "torch": ">=2.0.0"
+      },
+      "port": 3002
+    },
+    "ipfs_parquet_to_car_js": {
+      "type": "node",
+      "version": "1.0.0",
+      "dependencies": {
+        "parquet-wasm": ">=0.4.0",
+        "ipfs-car": ">=0.9.0"
+      },
+      "port": 3003
+    },
+    "hallucinate_app": {
+      "type": "hybrid",
+      "version": "1.0.0",
+      "frontend": {
+        "port": 8080,
+        "dependencies": {
+          "react": ">=18.0.0",
+          "webgpu": ">=0.1.34"
+        }
+      },
+      "backend": {
+        "port": 8081,
+        "dependencies": {
+          "fastapi": ">=0.95.0",
+          "transformers": ">=4.0.0"
+        }
+      }
+    }
+  },
+  "ipfs": {
+    "node": "http://localhost:5001",
+    "gateway": "http://localhost:8080",
+    "swarm_port": 4001
+  },
+  "monitoring": {
+    "metrics_port": 9090,
+    "logging": {
+      "level": "info",
+      "format": "json",
+      "outputs": ["file", "console"]
+    }
+  },
+  "security": {
+    "cors": {
+      "allowed_origins": ["http://localhost:8080"],
+      "allowed_methods": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "rate_limiting": {
+      "requests_per_minute": 60,
+      "burst": 10
+    }
+  },
+  "development": {
+    "hot_reload": true,
+    "debug_mode": true,
+    "test_coverage_threshold": 80
+  }
+} 
